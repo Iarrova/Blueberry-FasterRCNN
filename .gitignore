@@ -1,0 +1,10 @@
+.ipynb_checkpoints
+
+model
+dataset
+
+Arandanos\ Dataset/via-2.0.10
+
+*.jpg
+*.png
+*.jpeg
