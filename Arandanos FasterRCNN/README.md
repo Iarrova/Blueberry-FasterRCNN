@@ -28,16 +28,7 @@
   <h3 align="center">FasterRCNN</h3>
 
   <p align="center">
-    FasterRCNN implementation in Keras, using Google's Open Image Dataset v6.
-    <br />
-    <a href="https://github.com/Iarrova/FasterRCNN"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Iarrova/FasterRCNN">View Demo</a>
-    ·
-    <a href="https://github.com/Iarrova/FasterRCNN/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Iarrova/FasterRCNN/issues">Request Feature</a>
+    FasterRCNN implementation in Keras, using Blueberries Dataset.
   </p>
 </p>
 
@@ -61,9 +52,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#notes">Notes</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -74,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-FasterRCNN object detection using Keras, trained with Google's Open Image Dataset v6.
+FasterRCNN object detection using Keras, trained with Blueberries Dataset for fruit counting.
 
 
 ### Built With
@@ -90,16 +78,14 @@ FasterRCNN object detection using Keras, trained with Google's Open Image Datase
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* Tensorflow 2.4.0
-* Keras 2.4.3
-* OpenCV-Python 4.5.1.48
-* Numpy 1.19.5
-* Pandas 1.1.5
-* Scikit-Learn 0.24.0
+* Tensorflow 2.2.0
+* Keras 2.3.0-tf
+* OpenCV-Python 4.5.0
+* Numpy 1.19.2
+* Pandas 1.1.4
+* Scikit-Learn 0.23.2
 * Scikit-Image 0.17.2
-* Jupyter Notebook 6.1.6
+* Jupyter Notebook 6.2.0
 
 To install prerequisites, simply run:
   ```sh
@@ -111,7 +97,7 @@ To install prerequisites, simply run:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Iarrova/FasterRCNN.git
+   git clone https://github.com/Iarrova/Blueberry-FasterRCNN.git
    ```
 2. Install required packages
    ```sh
@@ -123,35 +109,11 @@ To install prerequisites, simply run:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-DataPreprocessing.ipynb scans Open Image Dataset for the specified classes, download class specific images and creates the files 'train_annotations.txt' and 'test_annotations.txt' with the correct format for training the FRCNN network.
+FRCNN_Training.ipynb loads the annotation files and trains the network, using VGG16 as feature extractor. Creates required files and saves the weights after training.
 
-FRCNN_Train_VGG.ipynb loads the annotation files and trains the network, using VGG16 as feature extractor. Creates required files and saves the weights after training.
+FRCNN_Test.ipynb loads the trained model and validates, showing examples of working predictions and calculating F1-Score score.
 
-FRCNN_Test_VGG.ipynb loads the trained model and validates, showing examples of working predictions and calculating mAP (mean Average Precision) score.
-
-
-<!-- NOTES -->
-## Notes
-Please do note that the FRCNN_Train_VGG.ipynb trains only for a few epochs. This was for demonstration purposes. The real training was done on Google Colab for 40 Epochs and using 1000 Steps per Epoch. The weights file available under model/ is the one done on Google Colab.
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+FRCNN_Inference.ipynb loads testing images to display inference results on original size images, as well as performing and evaluating the counting method
 
 
 
@@ -160,7 +122,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Ian Roberts  - ian.roberts@sansano.usm.cl
 
-Project Link: [https://github.com/Iarrova/FasterRCNN](https://github.com/Iarrova/FasterRCNN)
+Project Link: [https://github.com/Iarrova/Blueberry-FasterRCNN](https://github.com/Iarrova/Blueberry-FasterRCNN)
 
 
 
