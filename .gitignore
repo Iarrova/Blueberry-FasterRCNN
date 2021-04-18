@@ -1,8 +1,11 @@
 .ipynb_checkpoints
+__pycache__
 
 model
 dataset
 inference
+images
+patches
 
 Arandanos\ Dataset/via-2.0.10
 
