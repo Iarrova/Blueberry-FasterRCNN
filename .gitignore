@@ -8,6 +8,7 @@ images
 patches
 
 Arandanos\ Dataset/via-2.0.10
+Arandanos\ FasterRCNN/inference
 
 *.jpg
 *.png
